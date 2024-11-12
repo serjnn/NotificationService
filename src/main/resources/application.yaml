@@ -1,0 +1,11 @@
+
+spring:
+  kafka:
+    bootstrap-servers: 127.0.0.1:29092
+
+server:
+  port: 7002
+
+
+application:
+  name: notificationService
