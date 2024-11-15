@@ -14,7 +14,7 @@ public class KafkaConsumerService {
 
     private final NotificationService notificationService;
 
-    @KafkaListener(topics = "discountNotifications", groupId = "notification_group")
+    @KafkaListener(topics = "discountNotifTopic", groupId = "notification_group")
     public void  consumeDiscountNotification(DiscountNotification discount) {
         notificationService.translateDiscountNotification(discount);
 
