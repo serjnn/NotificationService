@@ -31,6 +31,8 @@ public class KafkaConsumerConfiguration {
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
+        props.put(JsonDeserializer.VALUE_DEFAULT_TYPE, "com.serjnn.NotificationService.dtos.DiscountNotification");
+        props.put(JsonDeserializer.USE_TYPE_INFO_HEADERS, false);
 
 
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(),
